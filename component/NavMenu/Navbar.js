@@ -55,7 +55,7 @@ const Navbar = ({ toggle, isOpen }) => {
                         <Link href={`/${p.pagelink}`} key={p.page}>
                           <a className=" uppercase hover:text-primaryColor text-textColor hover:font-extralight z-10 ">
                             <li
-                              className="  rounded-sm transition duration-700 ease-in-out
+                              className=" rounded-sm transition duration-700 ease-in-out
                      hover:bg-borderLight px-2 py-1 uppercase "
                             >
                               {p.page}

@@ -19,11 +19,11 @@ const DropDownMenu = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? "text-center block  border-b h-auto border-borderColor text-textColor"
-          : "hidden h-0 "
+          ? "transition-all duration-700 ease-in-out text-center visible opacity-100  border-b h-auto border-borderColor text-textColor"
+          : "invisible opacity-0 h-0 "
       }
     >
-      <header className=" flex justify-center items-center py-8">
+      <header className=" transition-all duration-700 ease-in-out flex justify-center items-center py-8">
         <div className="text-center ">
           <h1 className="menuButton text-textColor" onClick={handleDropdown}>
             <AiOutlineClose /> Close
@@ -31,7 +31,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
         </div>
       </header>
 
-      <ul className="block  py-4 animate-nav-animate">
+      <ul className="visible opacity-100 transition duration-700 ease-in-out py-4 animate-nav-animate">
         {NavElement.map((data) => (
           <li
             key={data.menu}
@@ -48,8 +48,8 @@ const DropDownMenu = ({ isOpen, toggle }) => {
                 {data.menu}
                 <i
                   className={
-                    data.menu == "Pages transition delay-700 duration-300 ease-in-out"
-                      ? "block text-textDark text-h4 absolute top-0 left-14"
+                    data.menu == "Pages transition-all delay-700 duration-300 ease-in-out"
+                      ? "visible opacity-100 text-textDark text-h4 absolute top-0 left-14"
                       : "invisible opacity-0"
                   }
                 >
@@ -61,7 +61,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
             <ul
               className={
                 data.submenu[0].page != "" && isDropdown
-                  ? " block  subMenu  static  w-full "
+                  ? " block subMenu  static  w-full "
                   : "  hidden "
               }
             >

@@ -37,7 +37,7 @@
   }
 
   .menuButton {
-    @apply flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
+    @apply transition duration-700 ease-in-out flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
   }
 
   .subMenu {
